@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+	<head>
+		<title>Risks</title>
+		{% include "include/links.html" %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/create/createRisk.css' %}">
+	</head>
+	<body>
+		<div class="header-container">
+			<a class="option-link" href="/test/">Back to home</a>
+		</div>
+		<div id="fields-container">
+			<div class="addFieldBtn-container">
+				<button class="btn btn-primary" @click="addField">Add Field</button>
+			</div>
+			<div class="riskNameInput-container">
+				<input type="text" class="form-control riskname-input" :class="empty" v-model="name" placeholder="Risk Name" @keyup="function() {empty = ''}">
+			</div>
+			<div>
+				<div v-for="field in fields" class="mainInput-container" :class="field.dataType">
+					<div>
+						<div class="input-container">
+							<input type="text" class="form-control field-input" :class="field.empty" v-model="field.attrName" @keyup="function() {field.empty = ''}" placeholder="Field Name">
+							<h5>Select data type: </h5>
+							<select v-model="field.dataType">
+								<option value="text">Text</option>
+								<option value="number">Number</option>
+								<option value="date">Date</option>
+								<option value="enum">Enum</option>
+							</select>
+						</div>
+						<div v-if="field.dataType=='enum'" class="options-container">
+							<button class="btn btn-primary" @click="addOption(field)">Add Option</button>
+							<div class="option-subcontainer" v-for="option in field.options">
+								<input class="form-control option-input" :class="option.empty" v-model="option.option" @keyup="function() {option.empty = ''}" placeholder="Option">
+								<button class="btn btn-danger" @click="deleteOption(field,option)">Delete</button>
+							</div>
+							
+						</div>
+					</div>
+					<button class="btn btn-danger" @click="deleteField(field)">Delete</button>
+				</div>
+				<button class="btn btn-success" @click="createField">Create</button>
+			</div>
+		</div>
+	</body>
+	{% include "include/scripts.html" %}
+	<script type="text/javascript" src="{% static 'js/create/createRisk.js' %}"></script>
+</html>

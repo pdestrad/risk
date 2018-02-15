@@ -1,0 +1,86 @@
+/*  HEADER STYLES  */
+.header-container {
+	display: flex;
+}
+.option-link {
+	margin: 20px 0px 0px 20px;
+	padding: 8px 25px;
+	height: 40px;
+	border-radius: 7px;
+	background-color: gray;
+	color: white;
+	transition: background-color 0.3s ease 0s;
+}
+.option-link:hover {
+	color: white;
+	text-decoration: none;
+	background-color: darkgray;
+}
+
+/*  FORM STYLES  */
+#fields-container {
+	margin: 50px 190px 0px;
+	padding: 30px 30px;
+	background-color: #e0e0e0;
+	border-radius: 7px;
+	text-align: center;
+}
+.addFieldBtn-container {
+	width: 100%;
+	text-align: right;
+}
+.riskNameInput-container {
+	width: 100%;
+	margin: 30px 0px;
+}
+.riskname-input {
+	text-align: center
+}
+.mainInput-container {
+	display: flex;
+	margin-bottom: 20px;
+}
+.input-container {
+	display: flex;
+}
+.input-container input {
+	width: 400px;
+}
+.input-container h5 {
+	width: 200px;
+	margin-left: 20px;
+	padding-top: 5px;
+}
+.enum {
+	padding: 10px;
+	border-radius: 7px;
+	border: 1px solid black;
+	background-color: lightgray;
+}
+.options-container {
+	margin-top: 10px;
+	text-align: right;
+}
+.option-subcontainer {
+	display: flex;
+}
+.option-subcontainer button {
+	margin: 10px 0px 0px 20px !important;
+}
+
+.option-input {
+	margin-top: 10px;
+	text-align: left;
+}
+.mainInput-container button {
+	margin-left: auto;
+	height: 38px;
+}
+.empty {
+	background-color: #ffc6c6;
+}
+
+
+
+
+

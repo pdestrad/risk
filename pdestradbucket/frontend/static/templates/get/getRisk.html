@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+	<head>
+		<title>Risks</title>
+		{% include "include/links.html" %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/get/getRisk.css' %}">
+	</head>
+	<body>
+		<div class="header-container">
+			<a class="option-link" href="/test/">Back to home</a>
+			<div id="riskModelSelector-container">
+				<h3>Please select a Risk Model</h3>
+				<select id="riskModelSelector" class="form-control riskModelSelector" v-on:change="getRisk(document.getElementById('riskModelSelector').value)">
+					<option class="riskModel-option" v-for="risk in risks" v-bind:value="risk.id">[[risk.name]]</option>
+				</select>
+			</div>
+		</div>
+		<div id="riskFields-container">
+			<div class="title-container">
+				<h1>[[ riskName ]]</h1>
+			</div>
+			
+			<div class="input-container" v-for="basic in basics">
+				<h3>[[basic.attrName]]:</h3>
+				<input class="form-control risk-input" v-bind:type="basic.dataType" v-bind:placeholder="basic.attrName">
+			</div>
+			<div class="input-container" v-for="enumDataType in enums">
+				<h3>[[enumDataType.attrName]]:</h3>
+				<select class="form-control risk-input">
+					<option>-----</option>
+					<option v-for="enumOption in enumDataType.options">[[ enumOption.option ]]</option>
+				</select>
+			</div>
+			<button class="btn btn-primary" v-on:click="alert('Submited! (test)')">Submit</button>
+		</div>
+	</body>
+	{% include "include/scripts.html" %}
+	<script type="text/javascript" src="{% static 'js/get/getRisk.js' %}"></script>
+</html>

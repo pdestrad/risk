@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+	<head>
+		<title>Risks</title>
+		{% include "include/links.html" %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/home/index.css' %}">
+	</head>
+	<body>
+		<div class="welcome-container">
+			<h1 class="welcome-h1">Welcome</h1>
+		</div>
+		<div class="options-container">
+			<a class="option-link left-link" href="get">See Available Risks</a>
+			<a class="option-link right-link" href="create">Create Risk Model</a>
+		</div>
+	</body>
+	{% include "include/scripts.html" %}
+	<script type="text/javascript" src="{% static 'js/home/index.js' %}"></script>
+</html>
