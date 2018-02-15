@@ -11,52 +11,31 @@ I really hope that I accomplished all the request you asked.
 
 link to a live hosted instance: https://1xdga6iv1c.execute-api.us-east-1.amazonaws.com/test/
 
+_________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
+
 DATA:
-- Python file containing the ORM classes for the tables:
-_____________________
- risk
- |
- |_ pdestradbucket
-   |
-   |_ restapi
-     |
-     |_ models.py
-_____________________
+- Python file containing the ORM classes for the tables: ||
+	risk/pdestradbucket/restapi/models.py
 
-- An entity relationship diagram:
-_____________________
- risk
- |
- |_ ERD.png
-_____________________
-
+- An entity relationship diagram: ||
+	risk/ERD.png
+	
+_________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
 
 BACKEND:
-_____________________
- risk
- |
- |_ pdestradbucket
-   |
-   |_ restapi
-     |
-     |_ serializer.py
-     |_ urls.py
-     |_ views.py
-_____________________
+- risk/pdestradbucket/restapi/serializer.py
+- risk/pdestradbucket/restapi/urls.py
+- risk/pdestradbucket/restapi/views.py
 
+_________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
 
 FRONTEND:
-(Vue.js)
-_______________________________________
- risk
- |
- |_ pdestradbucket
-   |
-   |_ frontend
-     |
-     |_ static
-       |
-       |_ css
-       |_ js (vue.js files)
-       |_ templates (html files)
-_______________________________________
+- risk/pdestradbucket/frontend/css
+- risk/pdestradbucket/frontend/js (vue.js files)
+- risk/pdestradbucket/frontend/templates (html files)
+
+_________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
